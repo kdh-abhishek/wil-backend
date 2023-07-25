@@ -34,3 +34,4 @@ mongoose.connect(
 
 
     console.log("Working")
+    // // "start": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js", //
