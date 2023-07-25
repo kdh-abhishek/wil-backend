@@ -6,7 +6,7 @@ import router from "./routes/user-routes.js";
 // import blogRouter from "./routes/blog-routes.js";
 import campaignRouter from "./routes/campaign-routes.js";
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors());
