@@ -6,7 +6,7 @@ import router from "./routes/user-routes.js";
 // import blogRouter from "./routes/blog-routes.js";
 import campaignRouter from "./routes/campaign-routes.js";
 
-
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors());
@@ -23,12 +23,13 @@ app.use("/api/campaign", campaignRouter);
 // app.use("/api/blog", blogRouter);
 
 //connecting to the database cloud
+
 mongoose.connect(
     "mongodb+srv://admin:mhHDfaZogMoxUhvF@cluster0.trvhxcr.mongodb.net/Campaigns?retryWrites=true&w=majority"
     )
-    .then(() => app.listen(5000))
+    .then(() => app.listen(port))
     .then(() => 
-        console.log("Connected To Database and Listening to port 5000")
+        console.log(`Connected To Database and Listening to port ${port}`)
     )
     .catch((err) => console.log("err"));
 
