@@ -10,15 +10,15 @@
     "routes": [
         {
             "src":"/api/user/(.*)",
-            "dest": "/app.js"
+            "dest": "app.js"
         },
         {
             "src":"/api/campaign/(.*)",
-            "dest": "/app.js"
+            "dest": "app.js"
         },
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "(.*)",
+            "dest": "app.js"
         }
     ]
 }
